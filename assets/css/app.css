@@ -1,0 +1,292 @@
+/***
+Caught In The Web Book
+Author: Maxwell Cofie
+Purpose: StyleSheet for book project
+***/
+
+@font-face {
+    font-family: "TimeslessBold";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../fonts/Timeless-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Timeless";
+    font-style: normal;
+    font-weight: bold;
+    src: url("../fonts/Timeless.ttf") format("truetype");
+}
+
+/*Reset default browser css attributes*/
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Timeless';
+}
+
+p {
+    font-size: 1.1em;
+    color: #525252;
+    line-height: 1.5em;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Set Default font for */
+h1, h2, h3, h4, h5 {
+    font-family: "TimeslessBold";
+    line-height: 1.5em;
+}
+
+/****
+    -------- BASIC LAYOUT OF WEBSITE ----------
+ ***/
+main {
+    flex: 70%;
+    float: left;
+}
+
+#header-tint {
+    width: 100%;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.5607843137254902);
+}
+
+nav {
+
+}
+
+nav ul > li, .list-inline {
+    display: inline;
+    padding: 0 10px;
+}
+
+nav ul > li h4 {
+    display: inline;
+}
+
+header, section, footer {
+    width: 100%;
+    padding: 100px 0;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+/*Specifying the individual properties for the various sections*/
+/*Header - Section*/
+header {
+    background-image: url("../imgs/sunrise.jpg");
+    background-position: left;
+    padding: 0 !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFF;
+}
+
+#map {
+    width: 100%;
+    float: left;
+    padding: 200px 0;
+    background-image: url("../imgs/map.png");
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#mid-section {
+    justify-content: left;
+    background-color: #000;
+    color: #FFF;
+}
+
+/*set color for mid section H1*/
+#mid-section h1 {
+    color: #fbb55c;
+}
+
+#mid-section p {
+    color: #d0d0d0;
+}
+
+.right, .left {
+    padding: 30px 0;
+}
+
+.left {
+    width: 50%;
+    float: left;
+}
+
+.right {
+    width: 50%;
+    float: right;
+}
+
+.left > ul, .right > ul {
+    list-style: none;
+}
+
+/*This section replaces the above*/
+.unstyled-list {
+    list-style: none;
+}
+
+
+#top-section {
+}
+
+.cards-section {
+    width: 100%;
+    float: left;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+.card ul li:nth-child(3) {
+    text-align: left;
+}
+
+.profile-card {
+    width: 22%;
+    padding: 10px;
+    margin: 3px;
+    text-align: left;
+}
+
+#lower-section {
+    background-color: #ffeaab;
+}
+
+#bottom-section {
+    /*justify-content: right;*/
+}
+
+#bottom-section ul li {
+    margin: 20px 0;
+}
+
+
+footer {
+    background-color: #000;
+    color: #FFF !important;
+    padding: 0 !important;
+}
+
+footer p {
+    color: #FFF;
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of
+each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    #logo, nav {
+        text-align: center !important;
+    }
+
+    .container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    main, nav, header {
+        flex-direction: column;
+    }
+
+    .cards-section {
+        flex-direction: column !important;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .profile-card {
+        width: 100%;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+}
+
+/*
+HELPERS
+*/
+
+.image-wrapper {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.team-profile-img {
+    border-radius: 100%;
+    box-shadow: inset 0px 1px 1px 0px #888;
+    padding: 5px;
+    border: 4px solid #000;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+input, button, textarea {
+    border-radius: 10px;
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+input {
+    width: 95%;
+    border: 1px solid #c7c7c7;
+    padding-left: 5%;
+    height: 45px;
+}
+
+textarea {
+    width: 90%;
+    border-radius: 10px;
+    border: 1px solid #c7c7c7;
+    min-height: 200px;
+    padding: 5%;
+}
+
+form {
+    padding: 10px;
+}
+
+button {
+    float: left;
+    width: 100%;
+    height: 45px;
+    background-color: #000;
+    color: white;
+}
+
