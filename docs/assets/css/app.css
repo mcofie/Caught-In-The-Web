@@ -23,7 +23,7 @@ Purpose: StyleSheet for book project
     margin: 0;
     border: 0;
     padding: 0;
-    font-family: 'Timeless';
+    font-family: 'Timeless', serif;
 }
 
 p {
@@ -40,87 +40,22 @@ a {
 
 /* Set Default font for */
 h1, h2, h3, h4, h5 {
-    font-family: "TimeslessBold";
+    font-family: "TimeslessBold", serif;
     line-height: 1.5em;
 }
 
 /****
     -------- BASIC LAYOUT OF WEBSITE ----------
  ***/
+
 main {
     flex: 70%;
     float: left;
 }
 
-#header-tint {
-    width: 100%;
-    float: left;
-    background-color: rgba(0, 0, 0, 0.5607843137254902);
-}
-
-nav {
-
-}
-
-nav ul > li, .list-inline {
-    display: inline;
-    padding: 0 10px;
-}
-
-nav ul > li h4 {
-    display: inline;
-}
-
-header, section, footer {
-    width: 100%;
-    padding: 100px 0;
-    float: left;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
 .container {
     padding-left: 15%;
     padding-right: 15%;
-}
-
-/*Specifying the individual properties for the various sections*/
-/*Header - Section*/
-header {
-    background-image: url("../imgs/sunrise.jpg");
-    background-position: left;
-    padding: 0 !important;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #FFF;
-}
-
-#map {
-    width: 100%;
-    float: left;
-    padding: 200px 0;
-    background-image: url("../imgs/map.png");
-    background-position: left;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#mid-section {
-    justify-content: left;
-    background-color: #000;
-    color: #FFF;
-}
-
-/*set color for mid section H1*/
-#mid-section h1 {
-    color: #fbb55c;
-}
-
-#mid-section p {
-    color: #d0d0d0;
 }
 
 .right, .left {
@@ -141,12 +76,48 @@ header {
     list-style: none;
 }
 
-/*This section replaces the above*/
 .unstyled-list {
     list-style: none;
 }
 
 
+header, section, footer {
+    width: 100%;
+    padding: 100px 0;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-image: url("../imgs/sunrise.jpg");
+    background-position: left;
+    padding: 0 !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFF;
+}
+
+#header-tint {
+    width: 100%;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.5607843137254902);
+}
+
+nav ul > li, .list-inline {
+    display: inline;
+    padding: 0 10px;
+}
+
+nav ul > li h4 {
+    display: inline;
+}
+
+
+/*TOP SECTION*/
 #top-section {
 }
 
@@ -171,6 +142,31 @@ header {
     text-align: left;
 }
 
+
+/*MIDDLE SECTION*/
+
+#mid-section {
+    justify-content: left;
+    background-color: #000;
+    color: #FFF;
+}
+
+/*set color for mid section H1*/
+#mid-section h1 {
+    color: #fbb55c;
+}
+
+#mid-section p {
+    color: #d0d0d0;
+}
+
+
+/*LOWER SECTION*/
+#lower-section {
+    background-color: #ffeaab;
+}
+
+/*This section replaces the above*/
 .profile-card {
     width: 22%;
     padding: 10px;
@@ -178,10 +174,8 @@ header {
     text-align: left;
 }
 
-#lower-section {
-    background-color: #ffeaab;
-}
 
+/*BOTTOM SECTION*/
 #bottom-section {
     /*justify-content: right;*/
 }
@@ -190,7 +184,41 @@ header {
     margin: 20px 0;
 }
 
+input, button, textarea {
+    border-radius: 10px;
+    margin: 5px 0;
+    font-size: 1.2em;
+}
 
+input {
+    width: 95%;
+    border: 1px solid #c7c7c7;
+    padding-left: 5%;
+    height: 45px;
+}
+
+textarea {
+    width: 90%;
+    border-radius: 10px;
+    border: 1px solid #c7c7c7;
+    min-height: 200px;
+    padding: 5%;
+}
+
+form {
+    padding: 10px;
+}
+
+button {
+    float: left;
+    width: 100%;
+    height: 45px;
+    background-color: #000;
+    color: white;
+}
+
+
+/*FOOTER SECTION*/
 footer {
     background-color: #000;
     color: #FFF !important;
@@ -199,6 +227,16 @@ footer {
 
 footer p {
     color: #FFF;
+}
+
+#map {
+    width: 100%;
+    float: left;
+    padding: 200px 0;
+    background-image: url("../imgs/map.png");
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
@@ -255,38 +293,5 @@ HELPERS
 
 h1 {
     font-size: 2em;
-}
-
-input, button, textarea {
-    border-radius: 10px;
-    margin: 5px 0;
-    font-size: 1.2em;
-}
-
-input {
-    width: 95%;
-    border: 1px solid #c7c7c7;
-    padding-left: 5%;
-    height: 45px;
-}
-
-textarea {
-    width: 90%;
-    border-radius: 10px;
-    border: 1px solid #c7c7c7;
-    min-height: 200px;
-    padding: 5%;
-}
-
-form {
-    padding: 10px;
-}
-
-button {
-    float: left;
-    width: 100%;
-    height: 45px;
-    background-color: #000;
-    color: white;
 }
 
