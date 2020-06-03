@@ -8,14 +8,14 @@ Purpose: StyleSheet for book project
     font-family: "TimeslessBold";
     font-style: normal;
     font-weight: bold;
-    src: url("../fonts/Timeless-Bold.ttf") format("truetype");
+    src: url("../fonts/Quicksand_Bold.otf") format("truetype");
 }
 
 @font-face {
     font-family: "Timeless";
     font-style: normal;
     font-weight: bold;
-    src: url("../fonts/Timeless.ttf") format("truetype");
+    src: url("../fonts/Quicksand_Book.otf") format("truetype");
 }
 
 /*Reset default browser css attributes*/
@@ -27,9 +27,9 @@ Purpose: StyleSheet for book project
 }
 
 p {
-    font-size: 1.1em;
+    font-size: 0.95em;
     color: #525252;
-    line-height: 1.5em;
+    line-height: 1.4em;
 }
 
 a {
@@ -80,6 +80,7 @@ main {
     list-style: none;
 }
 
+/*HEADER SECTION*/
 
 header, section, footer {
     width: 100%;
@@ -116,6 +117,14 @@ nav ul > li h4 {
     display: inline;
 }
 
+.logo {
+    padding: 14px 0;
+}
+
+.logo > img {
+    height: 40px;
+}
+
 
 /*TOP SECTION*/
 #top-section {
@@ -133,8 +142,8 @@ nav ul > li h4 {
 }
 
 .card {
-    width: 30%;
-    margin: 10px;
+    width: 33%;
+    margin: 10px 0;
     text-align: center;
 }
 
@@ -175,9 +184,13 @@ nav ul > li h4 {
 }
 
 
+
 /*BOTTOM SECTION*/
 #bottom-section {
     /*justify-content: right;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(0.3%);
 }
 
 #bottom-section ul li {
@@ -243,7 +256,7 @@ footer p {
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of
 each other instead of next to each other */
 @media screen and (max-width: 700px) {
-    #logo, nav {
+    .logo, nav {
         text-align: center !important;
     }
 
@@ -286,10 +299,11 @@ HELPERS
 
 .team-profile-img {
     border-radius: 100%;
-    box-shadow: inset 0px 1px 1px 0px #888;
+    box-shadow: inset 0 1px 1px 0 #888;
     padding: 5px;
     border: 4px solid #000;
 }
+
 
 h1 {
     font-size: 2em;

@@ -1,32 +1,155 @@
-<!---
-Author: Maxwell Cofie
-Purpose: Caught In The Web - Sample Website
--->
+#### Chapter 6
+
+**F6.0**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+</body>
+</html>
+```
+
+**F6.1**
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <!--    Organization Name-->
-    <title>Molla. | Studio Arkitektur</title> <!--The title of the website that shows in the browser-->
-    <link href="assets/css/app.css" rel="stylesheet"/> <!--Stylesheet Added to html file-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Helps to scale the viewport based on the users device-->
-    <!--Introduce this for responsive website design-->
+    <title>Amaka & Co</title> <!--The title of the website that shows in the browser-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
 
-    <!--Favicon-->
-    <link rel="shortcut icon" href="assets/imgs/favicon.png"/>
-
-    <!--Add fontawesome to website-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet"
-          type="text/css"/>
+        section {
+            width: 100%;
+            height: 400px;
+            float: left;
+        }
+    </style>
 </head>
 <body>
-<header>
+<header style="width: 100%; float: left; height: 400px; background-color: #fbb55c;">
+    <!--Tint for header-->
+    <div id="header-tint">
+        <nav class="container" style="width: 100%; float: left; height: 70px; background-color: rebeccapurple;">
+            <!--Website navigation links-->
+        </nav>
+    </div>
+</header>
+<main>
+    <!--The section each section of the website
+    Represents the various rows or section of the website
+    -->
+    <section id="top-section" style="background-color: deepskyblue;">
+    </section>
+    <section id="mid-section" style="background-color: darkkhaki;">
+    </section>
+    <section id="lower-section" style="background-color: lavender;">
+    </section>
+    <section id="bottom-section" style="background-color: darksalmon;">
+    </section>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>
+```
+
+
+**F6.2**
+```html
+<main>
+    <!--The section each section of the website
+    Represents the various rows or section of the website
+    -->
+    <section id="top-section" style="background-color: deepskyblue;">
+    </section>
+    <section id="mid-section" style="background-color: darkkhaki;">
+    </section>
+    <section id="lower-section" style="background-color: lavender;">
+    </section>
+    <section id="bottom-section" style="background-color: darksalmon;">
+    </section>
+</main>
+```
+
+
+**F6.3**
+```html
+<ul class="unstyled-list">
+    <li><a href="#"><h4>Home</h4></a></li>
+    <li><a href="#"><h4>What We Do</h4></a></li>
+    <li><a href="#"><h4>Team</h4></a></li>
+ </ul>
+```
+
+
+
+
+**F6.4**
+```html
+<div id="header-tint">
+    <nav class="container" style="width: 100%; float: left; height: 70px; background-color: rebeccapurple;">
+        <!--Website navigation links-->
+    </nav>
+</div>
+```
+
+
+**F6.10**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--    Organization Name-->
+    <title>Amaka & Co</title> <!--The title of the website that shows in the browser-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        section {
+            width: 100%;
+            height: 400px;
+            padding: 20px 0;
+            float: left;
+        }
+
+        .left {
+            width: 50%;
+            float: left;
+            background-color: red;
+        }
+
+        .right {
+            width: 50%;
+            background-color: yellow;
+            float: right;
+        }
+
+        .card{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<header style="width: 100%; float: left; height: 400px; background-color: #fbb55c;">
     <!--Tint for header-->
     <div id="header-tint">
         <nav class="container">  <!--Website navigation links-->
-            <div class="left" style="padding: 0px 0;">
-                <div class="logo">
-                    <img src="assets/imgs/logo.png" class="image-wrapper"/>
+            <div class="left" style="padding: 25px 0;">
+                <div id="logo">
+                    <h4>Amaka & Co</h4>
                 </div>
             </div>
             <div class="right" style="padding: 25px 0;">
@@ -51,11 +174,10 @@ Purpose: Caught In The Web - Sample Website
     <!--The section each section of the website
     Represents the various rows or section of the website
     -->
-    <section id="top-section">
-        <!--        Two Inner sections in the parent section-->
+    <section id="top-section" style="background-color: deepskyblue;">
         <div class="container">
-            <h1>What We Do</h1>
             <div class="left">
+                <h1>What We Do</h1>
                 <!---->
                 <ul>
                     <li>
@@ -136,8 +258,7 @@ Purpose: Caught In The Web - Sample Website
             </div>
         </div>
     </section>
-    <section id="mid-section">
-        <!--        Two Inner sections in the parent section-->
+    <section id="mid-section" style="background-color: darkkhaki;">
         <div class="container">
             <div class="left">
                 <!---->
@@ -160,7 +281,7 @@ Purpose: Caught In The Web - Sample Website
             </div>
         </div>
     </section>
-    <section id="lower-section">
+    <section id="lower-section" style="background-color: lavender;">
         <div class="container">
             <h1>The Team</h1>
             <p> Driving world class performance in banking, the financial services and
@@ -229,7 +350,7 @@ Purpose: Caught In The Web - Sample Website
             </div>
         </div>
     </section>
-    <section id="bottom-section">
+    <section id="bottom-section" style="background-color: darksalmon;">
         <div class="container">
             <div class="left">
                 <h1>Contact Us</h1>
@@ -290,9 +411,7 @@ Purpose: Caught In The Web - Sample Website
         <div class="left">
             <ul class="unstyled-list">
                 <li>
-                    <div class="logo">
-                        <img src="assets/imgs/logo.png" class="image-wrapper"/>
-                    </div>
+                    <h4>Amako & Co</h4>
                 </li>
                 <li>
                     <p>
@@ -300,23 +419,18 @@ Purpose: Caught In The Web - Sample Website
                         labore et dolore magna aliqua
                     </p>
                 </li>
-                <br>
-                <li>
-                    <p>
-                        &copy; 2020. All rights reserved.
-                    </p>
-                </li>
             </ul>
         </div>
         <div class="right">
-            <h4>Social Media</h4>
-            <ul class="unstyled-list">
-                <li class="list-inline"><a href="#"><i class="fab fa-facebook fa-2x"></i></a></li>
-                <li class="list-inline"><a href="#"><i class="fab fa-twitter fa-2x"></i></a></li>
-                <li class="list-inline"><a href="#"><i class="fab fa-linkedin fa-2x"></i></a></li>
+            <h5>Social Media</h5>
+            <ul class="list-inline">
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>LinkedIn</li>
             </ul>
         </div>
     </div>
 </footer>
 </body>
 </html>
+```
